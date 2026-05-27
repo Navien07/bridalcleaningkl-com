@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18193247669"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18193247669');
+</script>
+<script>
+  // WhatsApp click conversion tracking
+  document.addEventListener('DOMContentLoaded', function() {
+    var waLinks = document.querySelectorAll('a[href*="wa.me"]');
+    waLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18193247669',
+          'value': 200.0,
+          'currency': 'MYR'
+        });
+      });
+    });
+  });
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bridal Cleaning KL | Wedding Gown, Lehenga, Baju Pengantin | Kedai Dobi Sharwin</title>
-<meta name="description" content="Specialist bridal outfit cleaning in KL — Wedding Gown, Lehenga, Baju Pengantin, Saree &amp; Qipao. Free pickup &amp; protective packaging. 45 years trusted. WhatsApp now.">
+<meta name="description" content="Specialist bridal outfit cleaning in KL — Wedding Gown, Lehenga, Baju Pengantin, Saree &amp; Qipao. Pickup &amp; protective packaging available. T&amp;C apply. 45 years trusted. WhatsApp now.">
 <meta property="og:title" content="Bridal Cleaning KL | Kedai Dobi Sharwin">
-<meta property="og:description" content="Specialist bridal outfit cleaning in KL — Wedding Gown, Lehenga, Baju Pengantin, Saree &amp; Qipao. Free pickup &amp; protective packaging. 45 years trusted.">
+<meta property="og:description" content="Specialist bridal outfit cleaning in KL — Wedding Gown, Lehenga, Baju Pengantin, Saree &amp; Qipao. Pickup &amp; protective packaging available. T&amp;C apply. 45 years trusted.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1519657337289-077653f724ed?q=80&w=1200&auto=format&fit=crop">
 <meta property="og:url" content="https://bridalcleaningkl.com">
 <meta property="og:type" content="website">
@@ -34,10 +57,10 @@
     "https://curtaincleaningkl.com",
     "https://facebook.com/mathialagan.dobi"
   ],
-  "openingHours": "Mo-Su 08:00-21:00",
+  "openingHours": "Mo-Su 08:00-20:00",
   "priceRange": "RM25 - RM70",
   "areaServed": ["Kuala Lumpur","Selangor"],
-  "description": "Specialist multicultural bridal outfit cleaning — Wedding Gown, Lehenga, Baju Pengantin, Saree, Qipao. Free pickup, free protective packaging. 45+ years experience since 1979."
+  "description": "Specialist multicultural bridal outfit cleaning — Wedding Gown, Lehenga, Baju Pengantin, Saree, Qipao. Pickup and protective packaging available. T&C apply. 45+ years experience since 1979."
 }
 </script>
 <style>
@@ -416,6 +439,8 @@ ul{list-style:none}
 .pricing-table tr:hover td{background:rgba(212,146,10,0.04)}
 .pricing-table td:nth-child(2){font-weight:600;color:var(--gold)}
 .pricing-badge{background:var(--gold);color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:100px;display:inline-block}
+.avail-badge{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);font-size:11px;font-weight:600;padding:3px 9px;border-radius:4px;text-transform:uppercase;letter-spacing:0.5px;border:1px solid rgba(255,255,255,0.12)}
+.avail-badge-light{background:rgba(0,0,0,0.05);color:#6b7a8d;font-size:11px;font-weight:600;padding:3px 9px;border-radius:4px;text-transform:uppercase;letter-spacing:0.5px;border:1px solid rgba(0,0,0,0.08)}
 .pricing-callout{
   margin-top:32px;background:var(--warm-dark);color:#fff;
   border-radius:var(--radius);padding:28px 32px;
@@ -675,6 +700,123 @@ ul{list-style:none}
 /* Mobile body padding for sticky bar */
 body{padding-bottom:72px}
 @media(min-width:1024px){body{padding-bottom:0}}
+
+/* ===== CONTACT SECTION ===== */
+#contact-us{
+  background:linear-gradient(135deg,#1a1208 0%,#211508 50%,#1a1208 100%);
+  padding:96px clamp(16px,4vw,48px);
+  border-top:1px solid rgba(212,146,10,0.3);
+}
+.contact-inner{max-width:1100px;margin:0 auto}
+.contact-section-label{
+  font-size:11px;font-weight:700;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--gold);margin-bottom:12px;
+  display:inline-block;font-family:'DM Sans',sans-serif;
+  font-variant:small-caps;
+}
+.contact-h2{
+  font-family:'DM Sans',sans-serif;font-weight:800;
+  font-size:clamp(2rem,4vw,3rem);color:#fff;
+  line-height:1.15;margin-bottom:10px;letter-spacing:-0.02em;
+}
+.contact-sub{
+  font-family:'DM Sans',sans-serif;font-size:16px;font-weight:300;
+  color:rgba(255,255,255,0.55);margin-bottom:48px;
+}
+.contact-cards{display:grid;grid-template-columns:1fr;gap:24px;margin-bottom:48px}
+@media(min-width:768px){.contact-cards{grid-template-columns:1fr 1fr}}
+.contact-card{
+  background:rgba(255,255,255,0.04);border:1px solid rgba(212,146,10,0.2);
+  border-radius:20px;padding:32px 28px;
+}
+.contact-card-title{
+  font-family:'DM Sans',sans-serif;font-weight:700;font-size:13px;
+  color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;
+  margin-bottom:24px;
+}
+.contact-info-block{margin-bottom:24px}
+.contact-info-label{
+  font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;
+  color:rgba(255,255,255,0.4);letter-spacing:0.2em;text-transform:uppercase;
+  margin-bottom:4px;
+}
+.contact-info-value{
+  font-family:'DM Sans',sans-serif;font-size:20px;font-weight:700;
+  color:#fff;margin-bottom:4px;
+}
+.contact-info-note{
+  font-family:'DM Sans',sans-serif;font-size:13px;font-weight:300;
+  color:rgba(255,255,255,0.45);margin-bottom:12px;
+}
+.btn-contact-gold{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--gold);color:#fff;
+  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;
+  padding:11px 22px;border-radius:100px;
+  transition:background 0.2s,transform 0.2s;margin-right:10px;margin-bottom:10px;
+}
+.btn-contact-gold:hover{background:var(--gold-dark);transform:scale(1.04)}
+.btn-contact-outline{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:var(--gold);
+  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;
+  padding:10px 22px;border-radius:100px;
+  border:1.5px solid rgba(212,146,10,0.5);
+  transition:border-color 0.2s,transform 0.2s;margin-bottom:10px;
+}
+.btn-contact-outline:hover{border-color:var(--gold);transform:scale(1.04)}
+.contact-hours{margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.07)}
+.contact-hours-title{
+  font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;
+  color:rgba(255,255,255,0.4);letter-spacing:0.2em;text-transform:uppercase;
+  margin-bottom:10px;
+}
+.contact-hours-row{
+  display:flex;justify-content:space-between;
+  font-family:'DM Sans',sans-serif;font-size:13px;font-weight:400;
+  color:rgba(255,255,255,0.6);padding:4px 0;
+}
+.contact-hours-row span:last-child{color:var(--gold);font-weight:600}
+
+/* Contact form */
+.contact-form-wrap{
+  background:rgba(255,255,255,0.04);border:1px solid rgba(212,146,10,0.2);
+  border-radius:20px;padding:36px 32px;
+}
+.contact-form-title{
+  font-family:'DM Sans',sans-serif;font-weight:700;font-size:20px;color:#fff;
+  margin-bottom:6px;
+}
+.contact-form-sub{
+  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;
+  color:rgba(255,255,255,0.45);margin-bottom:28px;
+}
+.contact-form-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:640px){.contact-form-grid{grid-template-columns:1fr 1fr}}
+.contact-form-group{display:flex;flex-direction:column;gap:6px}
+.contact-form-group.full{grid-column:1/-1}
+.contact-form-group label{
+  font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;
+  color:rgba(255,255,255,0.5);letter-spacing:0.1em;text-transform:uppercase;
+}
+.contact-form-group input,
+.contact-form-group select,
+.contact-form-group textarea{
+  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);
+  border-radius:10px;padding:12px 16px;
+  font-family:'DM Sans',sans-serif;font-size:14px;color:#fff;
+  outline:none;transition:border-color 0.2s;width:100%;
+}
+.contact-form-group input::placeholder,
+.contact-form-group textarea::placeholder{color:rgba(255,255,255,0.3)}
+.contact-form-group select option{background:#1a1208;color:#fff}
+.contact-form-group input:focus,
+.contact-form-group select:focus,
+.contact-form-group textarea:focus{border-color:rgba(212,146,10,0.6)}
+.contact-form-note{
+  margin-top:12px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:300;
+  color:rgba(255,255,255,0.35);text-align:center;
+}
 </style>
 </head>
 <body>
@@ -706,13 +848,13 @@ body{padding-bottom:72px}
 
 <!-- TOPBAR -->
 <div id="topbar" role="banner">
-  💍 Multicultural Bridal Specialists Since 1979 &nbsp;·&nbsp; 🚗 Free Pickup &amp; Protective Packaging Included
+  💍 Multicultural Bridal Specialists Since 1979 &nbsp;·&nbsp; 🚗 Pickup &amp; Protective Packaging Available · T&amp;C Apply
 </div>
 
 <!-- PROMO BANNER -->
 <div id="promo-banner" role="complementary" aria-label="Promotional offer">
   💛 <strong>Mid-Year Special</strong> — 15% off all bridal outfit cleaning above RM 80 this June!
-  &nbsp;<a href="https://wa.me/60111645310?text=Hi%2C%20I%27m%20interested%20in%20the%20Mid-Year%20bridal%20promo" target="_blank" rel="noopener">Claim via WhatsApp →</a>
+  &nbsp;<a href="https://wa.me/601116456310?text=Hi%2C%20I%27m%20interested%20in%20the%20Mid-Year%20bridal%20promo" target="_blank" rel="noopener">Claim via WhatsApp →</a>
   <button id="promo-close" aria-label="Dismiss promotional banner" onclick="this.parentElement.style.display='none'">×</button>
 </div>
 
@@ -729,9 +871,9 @@ body{padding-bottom:72px}
       <li><a href="#areas">Areas</a></li>
       <li><a href="#testimonials">Reviews</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="#contact-us">Contact Us</a></li>
     </ul>
-    <a href="https://wa.me/60111645310?text=Hi%2C%20I%27d%20like%20a%20free%20quote%20for%20bridal%20cleaning" target="_blank" rel="noopener" class="nav-cta" aria-label="WhatsApp us for a free quote">💬 WhatsApp Kami</a>
+    <a href="https://wa.me/601116456310?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20bridal%20cleaning" target="_blank" rel="noopener" class="nav-cta" aria-label="WhatsApp us for a quote">💬 WhatsApp Kami</a>
     <button class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false" id="hamburger">
       <span></span><span></span><span></span>
     </button>
@@ -742,8 +884,8 @@ body{padding-bottom:72px}
     <a href="#areas" role="menuitem">Areas</a>
     <a href="#testimonials" role="menuitem">Reviews</a>
     <a href="#faq" role="menuitem">FAQ</a>
-    <a href="contact.html" role="menuitem">Contact Us</a>
-    <a href="https://wa.me/60111645310?text=Hi%2C%20I%27d%20like%20a%20free%20quote%20for%20bridal%20cleaning" class="nav-cta" role="menuitem" target="_blank" rel="noopener">💬 WhatsApp Kami</a>
+    <a href="#contact-us" role="menuitem">Contact Us</a>
+    <a href="https://wa.me/601116456310?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20bridal%20cleaning" class="nav-cta" role="menuitem" target="_blank" rel="noopener">💬 WhatsApp Kami</a>
   </div>
 </nav>
 
@@ -760,12 +902,12 @@ body{padding-bottom:72px}
       <p class="hero-heritage">45 tahun merawat pakaian perkahwinan paling berharga di KL · Since 1979</p>
       <div class="hero-pills" role="list" aria-label="Key features">
         <span class="hero-pill" role="listitem">💍 Malay · Indian · Chinese</span>
-        <span class="hero-pill" role="listitem">✓ Free Pickup</span>
-        <span class="hero-pill" role="listitem">📦 Free Packaging</span>
+        <span class="hero-pill" role="listitem">✓ Pickup &amp; Delivery Available</span>
+        <span class="hero-pill" role="listitem">📦 Packaging Available</span>
         <span class="hero-pill" role="listitem">⚡ Express Available</span>
       </div>
       <div class="hero-ctas">
-        <a href="https://wa.me/60111645310?text=Hi%2C%20I%27d%20like%20a%20free%20quote%20for%20bridal%20cleaning" target="_blank" rel="noopener" class="btn-gold" aria-label="WhatsApp for free quote">💬 WhatsApp for Free Quote</a>
+        <a href="https://wa.me/601116456310?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20bridal%20cleaning" target="_blank" rel="noopener" class="btn-gold" aria-label="WhatsApp for a quote">💬 WhatsApp for a Quote</a>
         <a href="#pricing" class="btn-ghost">See Pricing →</a>
       </div>
       <p class="hero-emotional">Biarkan hari istimewa anda bermula dengan sempurna.</p>
@@ -779,7 +921,7 @@ body{padding-bottom:72px}
       <div class="hero-float-card" aria-label="Service highlight">
         <div class="hero-float-card-title">Pakaian Pengantin</div>
         <div class="hero-float-card-price">Cleaning · From RM 25</div>
-        <span class="hero-float-badge">FREE Packaging Included</span>
+        <span class="hero-float-badge">Packaging Included · T&amp;C</span>
       </div>
     </div>
   </div>
@@ -796,8 +938,8 @@ body{padding-bottom:72px}
     <span class="stat-label">Generasi Keluarga</span>
   </div>
   <div class="stat-item reveal" style="transition-delay:0.2s">
-    <span class="stat-num">FREE</span>
-    <span class="stat-label">Packaging Pelindung</span>
+    <span class="stat-num">T&amp;C</span>
+    <span class="stat-label">Pickup Available</span>
   </div>
   <div class="stat-item reveal" style="transition-delay:0.3s">
     <span class="stat-num">All 3</span>
@@ -934,11 +1076,11 @@ body{padding-bottom:72px}
       <div class="process-step reveal" role="listitem">
         <div class="process-num" aria-hidden="true">1</div>
         <h3 class="process-step-title">Book via WhatsApp</h3>
-        <p class="process-step-desc">Tell us your outfit type and preferred pickup time</p>
+        <p class="process-step-desc">Tell us your outfit type, area and preferred pickup time</p>
       </div>
       <div class="process-step reveal" role="listitem" style="transition-delay:0.18s">
         <div class="process-num" aria-hidden="true">2</div>
-        <h3 class="process-step-title">Free Pickup</h3>
+        <h3 class="process-step-title">Pickup</h3>
         <p class="process-step-desc">We collect from your doorstep — no need to leave home</p>
       </div>
       <div class="process-step reveal" role="listitem" style="transition-delay:0.36s">
@@ -971,7 +1113,7 @@ body{padding-bottom:72px}
     <div class="reveal">
       <span class="section-label">Harga Telus · Transparent Pricing</span>
       <h2 class="section-title">Harga Jujur. Tiada Caj Tersembunyi.</h2>
-      <p class="section-sub-en">Honest prices. No hidden charges. Free pickup and packaging always included.</p>
+      <p class="section-sub-en">Honest prices. No hidden charges. Pickup and packaging available. T&amp;C apply.</p>
     </div>
     <div class="reveal">
       <table class="pricing-table" aria-label="Bridal cleaning prices">
@@ -984,20 +1126,26 @@ body{padding-bottom:72px}
           </tr>
         </thead>
         <tbody>
-          <tr><td>Wedding Gown</td><td>From RM 70</td><td><span class="pricing-badge">FREE Protective Box</span></td><td><span class="pricing-badge">FREE</span></td></tr>
-          <tr><td>Wedding Coat</td><td>From RM 50</td><td><span class="pricing-badge">FREE</span></td><td><span class="pricing-badge">FREE</span></td></tr>
-          <tr><td>Lehenga (Bridal)</td><td>From RM 70</td><td><span class="pricing-badge">FREE</span></td><td><span class="pricing-badge">FREE</span></td></tr>
-          <tr><td>Baju Kurung Pengantin</td><td>From RM 40</td><td><span class="pricing-badge">FREE</span></td><td><span class="pricing-badge">FREE</span></td></tr>
-          <tr><td>Saree (Bridal)</td><td>From RM 25</td><td><span class="pricing-badge">FREE</span></td><td><span class="pricing-badge">FREE</span></td></tr>
-          <tr><td>Qipao / Cheongsam</td><td>From RM 45</td><td><span class="pricing-badge">FREE</span></td><td><span class="pricing-badge">FREE</span></td></tr>
-          <tr><td>Jubah Pengantin</td><td>From RM 40</td><td><span class="pricing-badge">FREE</span></td><td><span class="pricing-badge">FREE</span></td></tr>
-          <tr><td>Baju Melayu Pengantin</td><td>From RM 40</td><td><span class="pricing-badge">FREE</span></td><td><span class="pricing-badge">FREE</span></td></tr>
-          <tr><td><strong>Same-Day Express</strong></td><td>+RM 20</td><td><span class="pricing-badge">FREE</span></td><td><span class="pricing-badge">FREE</span></td></tr>
+          <tr><td>Wedding Gown</td><td>From RM 70</td><td><span class="pricing-badge avail-badge-light">Packaging Incl.</span></td><td><span class="pricing-badge avail-badge-light">Available · T&amp;C</span></td></tr>
+          <tr><td>Wedding Coat</td><td>From RM 50</td><td><span class="pricing-badge avail-badge-light">Packaging Incl.</span></td><td><span class="pricing-badge avail-badge-light">Available · T&amp;C</span></td></tr>
+          <tr><td>Lehenga (Bridal)</td><td>From RM 70</td><td><span class="pricing-badge avail-badge-light">Packaging Incl.</span></td><td><span class="pricing-badge avail-badge-light">Available · T&amp;C</span></td></tr>
+          <tr><td>Baju Kurung Pengantin</td><td>From RM 40</td><td><span class="pricing-badge avail-badge-light">Packaging Incl.</span></td><td><span class="pricing-badge avail-badge-light">Available · T&amp;C</span></td></tr>
+          <tr><td>Saree (Bridal)</td><td>From RM 25</td><td><span class="pricing-badge avail-badge-light">Packaging Incl.</span></td><td><span class="pricing-badge avail-badge-light">Available · T&amp;C</span></td></tr>
+          <tr><td>Qipao / Cheongsam</td><td>From RM 45</td><td><span class="pricing-badge avail-badge-light">Packaging Incl.</span></td><td><span class="pricing-badge avail-badge-light">Available · T&amp;C</span></td></tr>
+          <tr><td>Jubah Pengantin</td><td>From RM 40</td><td><span class="pricing-badge avail-badge-light">Packaging Incl.</span></td><td><span class="pricing-badge avail-badge-light">Available · T&amp;C</span></td></tr>
+          <tr><td>Baju Melayu Pengantin</td><td>From RM 40</td><td><span class="pricing-badge avail-badge-light">Packaging Incl.</span></td><td><span class="pricing-badge avail-badge-light">Available · T&amp;C</span></td></tr>
+          <tr><td>Salwar Set (Bridal)</td><td>From RM 20</td><td><span class="pricing-badge avail-badge-light">Packaging Incl.</span></td><td><span class="pricing-badge avail-badge-light">Available · T&amp;C</span></td></tr>
+          <tr><td>Blouse / Choli (Embroidered)</td><td>From RM 15</td><td><span class="pricing-badge avail-badge-light">Packaging Incl.</span></td><td><span class="pricing-badge avail-badge-light">Available · T&amp;C</span></td></tr>
+          <tr><td>Washti / Veshti (Formal)</td><td>From RM 10</td><td><span class="pricing-badge avail-badge-light">Packaging Incl.</span></td><td><span class="pricing-badge avail-badge-light">Available · T&amp;C</span></td></tr>
+          <tr><td>Salvai / Dupatta (Bridal Shawl)</td><td>From RM 10</td><td><span class="pricing-badge avail-badge-light">Packaging Incl.</span></td><td><span class="pricing-badge avail-badge-light">Available · T&amp;C</span></td></tr>
+          <tr><td>Evening Gown / Reception Dress</td><td>From RM 50</td><td><span class="pricing-badge avail-badge-light">Packaging Incl.</span></td><td><span class="pricing-badge avail-badge-light">Available · T&amp;C</span></td></tr>
+          <tr><td><strong>Same-Day Express</strong></td><td>+RM 20</td><td><span class="pricing-badge avail-badge-light">Packaging Incl.</span></td><td><span class="pricing-badge avail-badge-light">Available · T&amp;C</span></td></tr>
         </tbody>
       </table>
       <div class="pricing-callout" role="note">
         <p>💍 Worried about your precious outfit? Every bridal garment is individually inspected and hand-finished. <em>45 years of trust</em> — you are in safe hands.</p>
-        <a href="https://wa.me/60111645310?text=Hi%2C%20I%27d%20like%20an%20exact%20quote%20for%20bridal%20cleaning" target="_blank" rel="noopener" class="btn-gold-dark" aria-label="WhatsApp for exact price quote">💬 WhatsApp for Exact Quote</a>
+        <p style="margin-top:16px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.6;">All prices are approximate. Final price depends on fabric type, embellishment level and garment condition. WhatsApp us for an exact quote before booking.</p>
+        <a href="https://wa.me/601116456310?text=Hi%2C%20I%27d%20like%20an%20exact%20quote%20for%20bridal%20cleaning" target="_blank" rel="noopener" class="btn-gold-dark" aria-label="WhatsApp for exact price quote">💬 WhatsApp for Exact Quote</a>
       </div>
     </div>
   </div>
@@ -1027,13 +1175,13 @@ body{padding-bottom:72px}
             <td class="comparison-no">✗ Generic service</td>
           </tr>
           <tr>
-            <td>Free Protective Packaging</td>
-            <td class="comparison-yes">✓ Always FREE</td>
+            <td>Protective Packaging</td>
+            <td class="comparison-yes">✓ Available · T&amp;C</td>
             <td class="comparison-no">✗ Extra charge</td>
           </tr>
           <tr>
-            <td>Free Pickup &amp; Delivery</td>
-            <td class="comparison-yes">✓ Always Free</td>
+            <td>Pickup &amp; Delivery</td>
+            <td class="comparison-yes">✓ Available · T&amp;C</td>
             <td class="comparison-yes">✓ Some offer</td>
           </tr>
           <tr>
@@ -1103,7 +1251,7 @@ body{padding-bottom:72px}
       <span class="section-label">Kawasan Servis · We Cover</span>
       <h2 class="section-title">Kami Datang ke Kawasan Anda.</h2>
       <p class="section-sub-en">Serving brides and grooms across KL and Selangor.</p>
-      <p class="section-sub">Free pickup and delivery across 30+ areas.</p>
+      <p class="section-sub">Pickup and delivery available across 30+ areas. T&amp;C apply.</p>
     </div>
     <div class="areas-pills reveal" role="list" aria-label="Service areas">
       <span class="area-pill featured" role="listitem">Bangsar</span>
@@ -1132,7 +1280,7 @@ body{padding-bottom:72px}
       <span class="area-pill" role="listitem">Puchong</span>
       <span class="area-pill" role="listitem">Sunway</span>
     </div>
-    <p class="areas-note reveal">Tidak nampak kawasan anda? <a href="https://wa.me/60111645310?text=Hi%2C%20does%20bridal%20cleaning%20pickup%20cover%20my%20area?" target="_blank" rel="noopener" style="color:var(--gold);font-weight:500">WhatsApp us</a> — we may still be able to help!</p>
+    <p class="areas-note reveal">Tidak nampak kawasan anda? <a href="https://wa.me/601116456310?text=Hi%2C%20does%20bridal%20cleaning%20pickup%20cover%20my%20area?" target="_blank" rel="noopener" style="color:var(--gold);font-weight:500">WhatsApp us</a> — we may still be able to help!</p>
   </div>
 </section>
 
@@ -1217,7 +1365,7 @@ body{padding-bottom:72px}
       </article>
     </div>
     <div class="urgency-cta reveal">
-      <a href="https://wa.me/60111645310?text=Hi%2C%20I%20need%20express%20bridal%20cleaning%20slot" target="_blank" rel="noopener" class="btn-gold" aria-label="WhatsApp to book express cleaning slot">💬 WhatsApp Us Now to Book Express Slot</a>
+      <a href="https://wa.me/601116456310?text=Hi%2C%20I%20need%20express%20bridal%20cleaning%20slot" target="_blank" rel="noopener" class="btn-gold" aria-label="WhatsApp to book express cleaning slot">💬 WhatsApp Us Now to Book Express Slot</a>
     </div>
   </div>
 </section>
@@ -1237,7 +1385,7 @@ body{padding-bottom:72px}
           <span class="faq-toggle" aria-hidden="true">+</span>
         </button>
         <div class="faq-a" id="faq-a-1" role="region">
-          <div class="faq-a-inner">From RM25 for sarees to RM70 for wedding gowns. Free pickup and free protective packaging always included. WhatsApp us for an exact quote for your specific outfit.</div>
+          <div class="faq-a-inner">From RM25 for sarees to RM70 for wedding gowns. Pickup and protective packaging available. T&amp;C apply. WhatsApp us for an exact quote.</div>
         </div>
       </div>
       <div class="faq-item" role="listitem">
@@ -1282,7 +1430,7 @@ body{padding-bottom:72px}
           <span class="faq-toggle" aria-hidden="true">+</span>
         </button>
         <div class="faq-a" id="faq-a-6" role="region">
-          <div class="faq-a-inner">Yes — every bridal outfit is returned in protective packaging at no extra cost. Wedding gowns receive a protective box. This is always included, always free.</div>
+          <div class="faq-a-inner">Yes — protective packaging is available for all bridal outfits. Terms and conditions apply. Wedding gowns receive a protective box. WhatsApp us to confirm details.</div>
         </div>
       </div>
       <div class="faq-item" role="listitem">
@@ -1300,7 +1448,7 @@ body{padding-bottom:72px}
           <span class="faq-toggle" aria-hidden="true">+</span>
         </button>
         <div class="faq-a" id="faq-a-8" role="region">
-          <div class="faq-a-inner">Yes — free pickup AND free delivery across 30+ KL and Selangor areas. No hidden charges. Book via WhatsApp and we will arrange a time that suits you.</div>
+          <div class="faq-a-inner">Pickup and delivery is available within KL and Selangor areas. Terms and conditions apply. WhatsApp us to confirm coverage and arrange a time.</div>
         </div>
       </div>
     </div>
@@ -1314,8 +1462,99 @@ body{padding-bottom:72px}
     <p class="cta-banner-sub reveal">Let us care for your most precious outfit — the way it deserves.</p>
     <p class="cta-banner-sub2 reveal">Biarkan kami menjaga pakaian anda yang paling berharga.</p>
     <div class="cta-banner-btns reveal">
-      <a href="https://wa.me/60111645310?text=Hi%2C%20I%27d%20like%20to%20book%20free%20pickup%20for%20bridal%20cleaning" target="_blank" rel="noopener" class="btn-gold-dark" aria-label="WhatsApp for free pickup">💬 WhatsApp for Free Pickup</a>
+      <a href="https://wa.me/601116456310?text=Hi%2C%20I%27d%20like%20to%20book%20pickup%20for%20bridal%20cleaning" target="_blank" rel="noopener" class="btn-gold-dark" aria-label="WhatsApp to book pickup">💬 WhatsApp to Book Pickup</a>
       <a href="tel:+601116456310" class="btn-ghost-white" aria-label="Call us now">📞 011-1645 6310</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT US -->
+<section id="contact-us" aria-label="Contact us">
+  <div class="contact-inner">
+    <div class="reveal">
+      <span class="contact-section-label">Hubungi Kami · Contact Us</span>
+      <h2 class="contact-h2">Kami Sedia Membantu.</h2>
+      <p class="contact-sub">Reach us for bookings, quotes or any questions about your bridal outfit.</p>
+    </div>
+    <div class="contact-cards reveal">
+      <!-- LEFT: WhatsApp, Phone, Email, Hours -->
+      <div class="contact-card">
+        <div class="contact-card-title">WhatsApp &amp; Phone</div>
+        <div class="contact-info-block">
+          <div class="contact-info-label">📱 WhatsApp / Phone</div>
+          <div class="contact-info-value">011-1645 6310</div>
+          <div class="contact-info-note">Tap to call or WhatsApp</div>
+          <a href="https://wa.me/601116456310?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20cleaning" target="_blank" rel="noopener" class="btn-contact-gold">💬 Chat on WhatsApp</a>
+        </div>
+        <div class="contact-info-block">
+          <div class="contact-info-label">✉️ Email</div>
+          <div class="contact-info-value" style="font-size:16px">kedaidobisharwin@gmail.com</div>
+          <div class="contact-info-note">We reply within 24 hours</div>
+          <a href="mailto:kedaidobisharwin@gmail.com" class="btn-contact-outline">📧 Send an Email</a>
+        </div>
+        <div class="contact-hours">
+          <div class="contact-hours-title">Opening Hours</div>
+          <div class="contact-hours-row"><span>Monday – Friday</span><span>8am – 8pm</span></div>
+          <div class="contact-hours-row"><span>Saturday</span><span>8am – 8pm</span></div>
+          <div class="contact-hours-row"><span>Sunday</span><span>8am – 8pm</span></div>
+        </div>
+      </div>
+      <!-- RIGHT: Address, Map -->
+      <div class="contact-card">
+        <div class="contact-card-title">Our Location</div>
+        <div class="contact-info-block">
+          <div class="contact-info-label">📍 Address</div>
+          <div class="contact-info-value" style="font-size:15px;line-height:1.5">No 23, Pasar Malam Taman Kok Doh,<br>Segambut, 51200 Kuala Lumpur</div>
+          <div class="contact-info-note">Free parking available</div>
+          <a href="https://maps.google.com/?q=No+23+Pasar+Malam+Taman+Kok+Doh+Segambut+Kuala+Lumpur" target="_blank" rel="noopener" class="btn-contact-gold">📍 Google Maps</a>
+          <a href="https://waze.com/ul?q=Kedai+Dobi+Sharwin+Segambut+KL" target="_blank" rel="noopener" class="btn-contact-outline">🗺️ Waze</a>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.7!2d101.672!3d3.182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMTAnNTUuMiJOIDEwMcKwNDAnMTkuMiJF!5e0!3m2!1sen!2smy!4v1"
+          width="100%" height="220"
+          style="border:0;border-radius:12px;margin-top:16px;filter:grayscale(0.2)"
+          allowfullscreen loading="lazy"
+          title="Kedai Dobi Sharwin location map">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- WhatsApp Enquiry Form -->
+    <div class="contact-form-wrap reveal">
+      <h3 class="contact-form-title">Send Us a Message</h3>
+      <p class="contact-form-sub">Fill in the form below and it will open WhatsApp with your message pre-filled.</p>
+      <div class="contact-form-grid">
+        <div class="contact-form-group">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" name="name" required placeholder="Your name">
+        </div>
+        <div class="contact-form-group">
+          <label for="contact-phone">Phone / WhatsApp</label>
+          <input type="tel" id="contact-phone" name="phone" required placeholder="+60 XX-XXXX XXXX">
+        </div>
+        <div class="contact-form-group">
+          <label for="contact-outfit">Outfit Type</label>
+          <select id="contact-outfit" name="outfit" required>
+            <option value="">Select outfit type</option>
+            <option value="Wedding Gown">Wedding Gown</option>
+            <option value="Lehenga (Bridal)">Lehenga (Bridal)</option>
+            <option value="Baju Kurung Pengantin">Baju Kurung Pengantin</option>
+            <option value="Saree (Bridal)">Saree (Bridal)</option>
+            <option value="Qipao / Cheongsam">Qipao / Cheongsam</option>
+            <option value="Salwar Set">Salwar Set</option>
+            <option value="Washti / Veshti">Washti / Veshti</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="contact-form-group full">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="3" placeholder="Any special requirements or questions?"></textarea>
+        </div>
+      </div>
+      <div style="margin-top:20px;text-align:center">
+        <button type="button" onclick="sendContactWhatsApp()" class="btn-contact-gold" style="font-size:15px;padding:14px 32px;border:none;cursor:pointer">💬 Send via WhatsApp</button>
+      </div>
+      <p class="contact-form-note">Your message opens in WhatsApp. No personal data is stored on this website.</p>
     </div>
   </div>
 </section>
@@ -1348,6 +1587,7 @@ body{padding-bottom:72px}
           <li><a href="#areas">Service Areas</a></li>
           <li><a href="#testimonials">Reviews</a></li>
           <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact-us">Contact Us</a></li>
           <li><a href="https://kedaidobisharwin.com" target="_blank" rel="noopener">Main Site</a></li>
           <li><a href="https://curtaincleaningkl.com" target="_blank" rel="noopener">Curtain Cleaning</a></li>
         </ul>
@@ -1355,10 +1595,10 @@ body{padding-bottom:72px}
       <div>
         <div class="footer-col-title">Contact</div>
         <div class="footer-contact-item"><strong>Phone:</strong> <a href="tel:+601116456310" style="color:rgba(255,255,255,0.5)">011-1645 6310</a></div>
-        <div class="footer-contact-item"><strong>WhatsApp:</strong> <a href="https://wa.me/60111645310" target="_blank" rel="noopener" style="color:var(--gold)">wa.me/60111645310</a></div>
+        <div class="footer-contact-item"><strong>WhatsApp:</strong> <a href="https://wa.me/601116456310" target="_blank" rel="noopener" style="color:var(--gold)">wa.me/601116456310</a></div>
         <div class="footer-contact-item"><strong>Email:</strong> <a href="mailto:kedaidobisharwin@gmail.com" style="color:rgba(255,255,255,0.5)">kedaidobisharwin@gmail.com</a></div>
         <div class="footer-contact-item"><strong>Address:</strong> No 23, Pasar Malam Taman Kok Doh, Segambut, 51200 KL</div>
-        <div class="footer-contact-item"><strong>Hours:</strong> Mon–Sun, 8am–9pm</div>
+        <div class="footer-contact-item"><strong>Hours:</strong> Mon–Sun, 8am–8pm</div>
         <div class="footer-contact-item"><strong>Facebook:</strong> <a href="https://facebook.com/mathialagan.dobi" target="_blank" rel="noopener" style="color:var(--gold)">@mathialagan.dobi</a></div>
       </div>
     </div>
@@ -1374,7 +1614,7 @@ body{padding-bottom:72px}
 </footer>
 
 <!-- FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/60111645310?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20cleaning" target="_blank" rel="noopener" id="wa-float" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/601116456310?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20cleaning" target="_blank" rel="noopener" id="wa-float" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </svg>
@@ -1382,7 +1622,7 @@ body{padding-bottom:72px}
 
 <!-- MOBILE STICKY BOTTOM BAR -->
 <div id="mobile-bar" aria-label="Quick contact bar" role="navigation">
-  <a href="https://wa.me/60111645310?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20cleaning" target="_blank" rel="noopener" class="mobile-bar-btn mobile-bar-wa" aria-label="WhatsApp us">💬 WhatsApp Kami</a>
+  <a href="https://wa.me/601116456310?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20cleaning" target="_blank" rel="noopener" class="mobile-bar-btn mobile-bar-wa" aria-label="WhatsApp us">💬 WhatsApp Kami</a>
   <a href="tel:+601116456310" class="mobile-bar-btn mobile-bar-call" aria-label="Call us now">📞 Call Now</a>
 </div>
 
@@ -1554,6 +1794,22 @@ window.addEventListener('scroll', function(){
 }, {passive: true});
 
 })();
+
+/* ===== CONTACT WHATSAPP FORM ===== */
+function sendContactWhatsApp(){
+  var name = (document.getElementById('contact-name').value || '').trim();
+  var phone = (document.getElementById('contact-phone').value || '').trim();
+  var outfit = (document.getElementById('contact-outfit').value || '').trim();
+  var message = (document.getElementById('contact-message').value || '').trim();
+  if(!name){ alert('Please enter your name.'); return; }
+  if(!outfit){ alert('Please select an outfit type.'); return; }
+  var text = 'Hi, I would like to enquire about bridal cleaning.\n\n'
+    + 'Name: ' + name + '\n'
+    + (phone ? 'Phone: ' + phone + '\n' : '')
+    + 'Outfit: ' + outfit + '\n'
+    + (message ? 'Message: ' + message : '');
+  window.open('https://wa.me/601116456310?text=' + encodeURIComponent(text), '_blank', 'noopener');
+}
 </script>
 </body>
 </html>
